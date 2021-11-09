@@ -1,0 +1,23 @@
+{
+  "name": "hotelbooking",
+  "version": "1.0.0",
+  "description": "Second step of study program from MetaLamp inc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artashesfrangyan/hotelBooking.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/artashesfrangyan/hotelBooking/issues"
+  },
+  "homepage": "https://github.com/artashesfrangyan/hotelBooking#readme",
+  "devDependencies": {
+    "webpack": "^5.62.2",
+    "webpack-cli": "^4.9.1"
+  }
+}
