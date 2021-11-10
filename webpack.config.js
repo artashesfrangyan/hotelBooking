@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 module.exports= {
-    mode: 'development',
+  mode: 'development',
     context: path.resolve(__dirname, 'assets'),
     entry: './js/main.js',
     output: {
@@ -19,20 +19,10 @@ module.exports= {
     module: {
         rules: [
           {
-            test: /\.css$/,
+            test: /\.sass$/,
             use: [
-              // [style-loader](/loaders/style-loader)
-              { loader: 'style-loader' },
-              // [css-loader](/loaders/css-loader)
-              {
-                loader: 'css-loader',
-                options: {
-                  modules: true
-                }
-              },
-              // [sass-loader](/loaders/sass-loader)
-              { loader: 'sass-loader' }
-            ]
+              "style-loader", "css-loader", "sass-loader"
+            ],
           }
         ]
       }
