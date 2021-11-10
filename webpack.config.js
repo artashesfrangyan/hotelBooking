@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 module.exports= {
     mode: 'development',
@@ -10,6 +11,29 @@ module.exports= {
         filename: 'my-first-webpack.bundle.js',
     },
     plugins: [
-        new HtmlWebpackPlugin()
+        new HtmlWebpackPlugin({
+            template: './index.html' 
+        }),
+        new CleanWebpackPlugin()
     ],
+    module: {
+        rules: [
+          {
+            test: /\.css$/,
+            use: [
+              // [style-loader](/loaders/style-loader)
+              { loader: 'style-loader' },
+              // [css-loader](/loaders/css-loader)
+              {
+                loader: 'css-loader',
+                options: {
+                  modules: true
+                }
+              },
+              // [sass-loader](/loaders/sass-loader)
+              { loader: 'sass-loader' }
+            ]
+          }
+        ]
+      }
 }
