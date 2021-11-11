@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
+const WebpackDevServer = require('webpack-dev-server');
 
 module.exports= {
   mode: 'development',
@@ -31,5 +32,5 @@ module.exports= {
             use: "pug-loader"
           }
         ]
-      }
+      },
 }
