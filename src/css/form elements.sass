@@ -27,7 +27,7 @@
         color: $dark-shade-25
         line-height: 129%
 
-.subscription-text-field__wrapper
+.medium-field__wrapper
     display: flex
     width: 267px
     border: 1px solid $dark-shade-25
@@ -37,9 +37,19 @@
         color: $dark-shade-75
 
 
-.subscription-text-field__input
+.subscription-text-field__input, .filter-date-dropdown__input
     margin: 0px
     border: none
+
+.filter-date-dropdown__submit
+    font-family: $material
+    min-width: 44px
+    height: 44px
+    background: none
+    font-size: 24px
+    line-height: 24px
+    border: none
+    color: $dark-shade-50
 
 .subscription-text-field__submit
     font-family: $material
@@ -53,6 +63,8 @@
     color: transparent
     border: none
 
+.filter-date-dropdown__input::-webkit-calendar-picker-indicator
+    display: none
 
 
 
