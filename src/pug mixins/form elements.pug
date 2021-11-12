@@ -28,7 +28,18 @@ mixin text-field
             input.filter-date-dropdown__input.field(type="date" placeholder="Email")
             input.field__submit(type="submit" value="expand_more")
 
-    ul.expandable-checkbox-list
-        h3.title expandable checkbox list
+    mixin checkbox(...texts) 
+        ul.expandable-checkbox-list
+            .expandable-checkbox-list__wrapper
+                h3.title expandable checkbox list
+                input.field__submit(type="button" value="expand_more")
+            each text in texts
+                li.expandable-checkbox-list__item
+                    input.checkbox(type="checkbox" id=text)
+                    label.checkbox__label(for=text)=text
 
-        input.field__submit(type="button" value="expand_more")
+        
+        
+    +checkbox('Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь')
+        
+        
