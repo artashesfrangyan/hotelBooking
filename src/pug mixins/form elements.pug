@@ -1,4 +1,21 @@
 mixin text-field
     .text-field
-        h3.text-field__title.title text field
+        h3.title text field
         input(type="text" placeholder="Email").text-field__input.field
+    
+    .dropdown
+        h3.title dropdown
+        select.dropdown.field 
+            option.dropdown__option(disabled selected) Сколько гостей
+            option.dropdown__option 
+                h3.title спальни
+            option.dropdown__option 
+                h3.title кровати
+            option.dropdown__option 
+                h3.title ванные комнаты
+
+    .subscription-text-field
+        h3.title subscription text field
+        .subscription-text-field__wrapper
+            input.subscription-text-field__input.field(type="text" placeholder="Email")
+            input.subscription-text-field__submit(type="submit" value="arrow_forward")
