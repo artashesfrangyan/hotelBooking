@@ -27,21 +27,26 @@
         color: $dark-shade-25
         line-height: 129%
 
-.medium-field__wrapper
+.field-wrapper
     display: flex
-    width: 267px
     border: 1px solid $dark-shade-25
     border-radius: 4px
     &:hover,:focus
         border-color: $dark-shade-50
         color: $dark-shade-75
 
+.medium-field
+    width: 267px
 
-.subscription-text-field__input, .filter-date-dropdown__input
+.subscription-text-field__input, .filter-date-dropdown__input, .dropdown__field
     margin: 0px
     border: none
 
-.filter-date-dropdown__submit
+.dropdown__field
+    width: 222px
+    appearance: none
+
+.field__submit
     font-family: $material
     min-width: 44px
     height: 44px
@@ -51,22 +56,22 @@
     border: none
     color: $dark-shade-50
 
-.subscription-text-field__submit
-    font-family: $material
-    min-width: 44px
-    height: 44px
-    background: none
-    font-size: 24px
-    line-height: 24px
+.field__submit--gradient
     background-image: $purple-gradient
     -webkit-background-clip: text
     color: transparent
-    border: none
 
 .filter-date-dropdown__input::-webkit-calendar-picker-indicator
     display: none
 
-
+.expandable-checkbox-list
+    display: flex
+    align-items: center
+    margin: 0px
+    padding: 0px
+    .title
+        margin: 0px
+        margin-right: 30px
 
 
 
