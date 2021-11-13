@@ -2,7 +2,7 @@ mixin text-field
     .text-field
         h3.title text field
         input(type="text" placeholder="Email").text-field__input.field
-    
+mixin dropdown
     .dropdown
         h3.title dropdown
         .field-wrapper.medium-field
@@ -15,20 +15,20 @@ mixin text-field
                 option.dropdown__option 
                     h3.title ванные комнаты
             input.field__submit.field__submit(type="submit" value="expand_more")
-
+mixin subscription-text-field
     .subscription-text-field
         h3.title subscription text field
         .field-wrapper.medium-field
-            input.subscription-text-field__input.field(type="text" placeholder="Email")
+            input.subscription-text-field__input.dropdown__field.field(type="text" placeholder="Email")
             input.field__submit.field__submit--gradient(type="submit" value="arrow_forward")
-
+mixin filter-date-dropdown
     .filter-date-dropdown 
         h3.title filter date dropdown
         .field-wrapper.medium-field
-            input.filter-date-dropdown__input.field(type="date" placeholder="Email")
+            input.filter-date-dropdown__input.dropdown__field.field(type="date" placeholder="Email")
             input.field__submit(type="submit" value="expand_more")
 
-    mixin checkbox(...texts) 
+mixin checkbox(...texts) 
         ul.expandable-checkbox-list
             .expandable-checkbox-list__wrapper
                 h3.title expandable checkbox list
@@ -40,6 +40,6 @@ mixin text-field
 
         
         
-    +checkbox('Завтрак', 'Письменный стол', 'Стул для кормления', 'Кроватка', 'Телевизор', 'Шампунь')
+
         
         
