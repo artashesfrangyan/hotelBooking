@@ -3,21 +3,38 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
 const WebpackDevServer = require('webpack-dev-server');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports= {
   mode: 'development',
     context: path.resolve(__dirname, 'src'),
-    entry: './js/index.js',
+    entry: {
+      'index': './js/index.js',
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'my-first-webpack.bundle.js',
+        filename: 'js/[name].js',
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './index.pug' 
+          filename: 'index.html',
+          chunks: ['index', 'common'],
+          template: path.resolve(__dirname, 'src/index.pug')
         }),
-        new HtmlWebpackPugPlugin(),
-        new CleanWebpackPlugin()
+        // new HtmlWebpackPlugin({
+        //     template: './index.pug' 
+        // }),
+        // new HtmlWebpackPugPlugin(),
+        new CopyWebpackPlugin({
+          patterns: [
+            {
+              from: './images',
+              to: './images',
+              toType: 'dir',
+            },
+          ]
+        }),
+        new CleanWebpackPlugin(),
     ],
     module: {
         rules: [
@@ -30,7 +47,14 @@ module.exports= {
           {
             test: /\.pug$/,
             use: "pug-loader"
-          }
+          },
+          {
+            test: /\.(jpg|png|svg)$/,
+            loader: 'file-loader',
+            options: {
+                name: 'images/[name].[ext]'
+            },
+        }, 
         ]
       },
 }
