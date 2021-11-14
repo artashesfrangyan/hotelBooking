@@ -1,0 +1,13 @@
+mixin dropdown
+    .dropdown
+        h3.title dropdown
+        .field-wrapper.medium-field
+            select.dropdown__field.field
+                option.dropdown__option(disabled selected) Сколько гостей
+                option.dropdown__option 
+                    h3.title спальни
+                option.dropdown__option 
+                    h3.title кровати
+                option.dropdown__option 
+                    h3.title ванные комнаты
+            input.field__submit.field__submit(type="submit" value="expand_more")

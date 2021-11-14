@@ -1,4 +1,4 @@
-import '../css/variables.sass'
-import '../css/style.sass'
-import '../form elements/form elements.sass'
+import '../styles/variables.sass'
+import '../styles/style.sass'
+import '../modules/form elements/form elements.sass'
 import '../index.pug'

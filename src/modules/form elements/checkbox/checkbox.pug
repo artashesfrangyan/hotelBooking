@@ -1,0 +1,9 @@
+mixin checkbox(...texts) 
+        ul.expandable-checkbox-list
+            .expandable-checkbox-list__wrapper
+                h3.title expandable checkbox list
+                input.field__submit(type="button" value="expand_more")
+            each text in texts
+                li.expandable-checkbox-list__item
+                    input.checkbox(type="checkbox" id=text)
+                    label.checkbox__label(for=text)=text

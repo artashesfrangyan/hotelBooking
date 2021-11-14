@@ -1,4 +1,4 @@
-@import ../css/variables.sass
+@import ../../styles/variables.sass
 
 .title
     margin-bottom: 5px
@@ -74,7 +74,7 @@
 
 .checkbox:checked + .checkbox__label::before
     border-color: $purple
-    background-image: url(../svg/check.svg)
+    background-image: url("/svg/check.svg")
     background-repeat: no-repeat
     background-position: center center
 
@@ -82,19 +82,5 @@
 
 
 
-.filter-date-dropdown__input::-webkit-calendar-picker-indicator
-    display: none
 
-.expandable-checkbox-list
-    padding: 0px
 
-.expandable-checkbox-list__item
-    list-style: none
-    margin-bottom: 10px
-
-.expandable-checkbox-list__wrapper
-    display: flex
-    align-items: center
-    .title
-        margin: 0px
-        margin-right: 30px
